@@ -43,7 +43,7 @@
   margin-top: 16px;
 }
 
-li {
+.stats > li {
   list-style: none;
   width: 33.33%;
   /* flex-grow: 1; */

@@ -1,7 +1,11 @@
 import user from '../user.json'; //json парсится в {} под капотом
 import friends from '../friends.json';
+import data from '../data.json';
+import transactions from '../transactions.json';
 import { Profile } from './Profile/Profile';
 import { FriendList } from './FriendList/FriendList';
+import { Statistics } from './Statistics/Statistics';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 
 export const App = () => {
   return (
@@ -23,7 +27,13 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
+
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
+
       <FriendList friends={friends} />
+
+      <TransactionHistory items={transactions} />
     </div>
   );
 };
