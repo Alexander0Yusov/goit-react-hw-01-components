@@ -1,5 +1,5 @@
-import css from './Profile.module.css';
 import PropTypes from 'prop-types';
+import css from './Profile.module.css';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => (
   <div className={css.profile}>
@@ -32,9 +32,10 @@ Profile.propTypes = {
   tag: PropTypes.string,
   location: PropTypes.string,
   avatar: PropTypes.string,
-  //   stats: {
-  //     likes: PropTypes.number,
-  //     views: PropTypes.number,
-  //     followers: PropTypes.number,
-  //   },
+  // значение stats - обьект с конкретной структурой
+  stats: PropTypes.shape({
+    likes: PropTypes.number,
+    views: PropTypes.number,
+    followers: PropTypes.number,
+  }),
 };

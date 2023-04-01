@@ -1,5 +1,7 @@
-import css from './FriendListItem.module.css';
+import PropTypes from 'prop-types';
 import clsx from 'clsx';
+// сначала желательно абсолютные импорты, затем относительные
+import css from './FriendListItem.module.css';
 
 export const FriendListItem = ({ avatar, name, isOnline }) => (
   <li className={clsx(css.item)}>
@@ -8,3 +10,9 @@ export const FriendListItem = ({ avatar, name, isOnline }) => (
     <p className={css.name}>{name}</p>
   </li>
 );
+
+FriendListItem.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool,
+};
